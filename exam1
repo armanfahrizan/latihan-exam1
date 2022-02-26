@@ -1,0 +1,167 @@
+////////////////////////////////////
+///// Tipe Data dengan typeof //////
+////////////////////////////////////
+
+var str = "purwadhika"
+var numb = 26022022
+var bool = true
+var arr = [26, 2, 2022]
+var obj = {
+    tanggal: "dua enam",
+    bulan: "februari",
+    tahun: 2022
+}
+var und 
+var nol = null
+
+// console.log(typeof(str));
+// console.log(typeof(numb));
+// console.log(typeof(bool));
+// console.log(typeof(arr));
+// console.log(typeof(obj));
+console.log(typeof(und));
+console.log(typeof(nol));
+
+
+//////////////////////
+///// CRUD ARRAY /////
+//////////////////////
+
+const student = [
+    {
+    name: "Afkar Nugraha",
+    job: "Data Analyst",
+    addres: "Kab. Bekasi"
+    }
+]
+//Create
+student.push({name: "Mike D.", job: "Customer Service", addres: "Jakarta Utara"})
+student.push({name: "Beni Santosa", job: "Courier", addres: "Kota Depok"})
+
+//Read
+// console.log(student[1].name); 
+
+//Update
+student[1].addres = "Jakarta Timur"
+
+//Delete
+student.splice(2, 1)
+
+
+// console.table(student);
+
+//////////////////////////////
+/////ANALYSIS CODE STRING/////
+//////////////////////////////
+
+let exam = "Purwadhika Digital Technology School"
+let satu = "bertempat di Jakarta"
+
+console.log("panjang karakter exam: " + exam.length) //hasilnya 36
+console.log("\n");
+console.log("slice kar. setelah ke-11 sampai sebelum ke-30: " + exam.slice(11, 30)) //hasilnya Digital Technologi
+console.log("\n");
+console.log("index dari Digital adalah yang ke- "+exam.indexOf('Digital'))
+console.log("\n");
+console.log("substring karakter ke-11 sampai ke-19: " + exam.substring(11, 19)) //hasilnya Digital
+console.log("\n");
+console.log("split karakter berdasarkan spasi"+exam.split(' ')) //hasilnya array yang isinya ["Purwadhika", "Digital", "Technology", "School"]
+console.log("\n");
+console.log("ganti Purwadhika jadi PurWADhika: "+ exam.replace("Purwadhika", "PurWADhika"))
+console.log("\n");
+console.log("ganti semua huruf o kecil jadi O besar: "+ exam.replace(/o/g,"O")) // Purwadhika Digital TechnOlOgy SchOOl
+console.log("ganti huruf l kecil pertama dengan L besar"+ exam.replace('l', 'L')) // Purwadhika DigitaL Technology School
+console.log("\n");
+console.log("apakah DigiTal ada di dalam exam? "+ exam.includes("DigiTal")) // false
+console.log("\n");
+console.log("ubah semua huruf jadi kecil: "+ exam.toLowerCase()) //purwadhika digital technology school
+console.log("\n");
+console.log("ubah semua huruf jadi besar: "+ exam.toUpperCase()) //PURWADHIKA DIGITAL TECHNOLOGY SCHOOL
+console.log("\n");
+console.log("gabungin 2 variabel string: "+ exam.concat(" ", satu)) //Purwadhika Digital Technology School bertempat di Jakarta
+
+/////////////////////////////////////
+///// Perbedaan var, let, const /////
+/////////////////////////////////////
+/*  var mendeclare variable yang isinya bisa diganti, dan variabelnya dapat digunakan kembali setelahnya,
+    let mendeclare variabel yang isinya bisa diganti, tetapi variabelnya tidak dapat digunakan kembali,
+    const mendeclare variabel yang isinya tidak bisa diganti, hanya bisa ditambahkan, dan variabelnya tidak bisa digunakan kembali
+*/
+
+
+///////////////////////
+///// CRUD OBJECT /////
+///////////////////////
+
+// Create
+const player = {
+    name : "Del Piero",
+    position : "Second Striker",
+    team : "Juventus"
+}
+
+// Read
+console.log(player.name); //Del Piero
+console.log(player.team); //Juventus
+
+// Update
+player.nationality = "Italy"
+player.title = "Seri A League Winner"
+
+// Delete
+delete player.title //atau delete person["title"]
+console.log(player);
+
+
+///////////////////////////////
+///// JAVASCRIPT FUNCTION /////
+///////////////////////////////
+
+// syntax Function Declaration
+/* function functionName (x, y) {
+    statements
+
+    return (z)
+}
+*/
+makan(11)
+
+function makan (jam) {
+    if (jam > 5 && jam < 10) {
+        jenis = "Sarapan"
+    } else if (jam > 10 && jam < 15) {
+        jenis = "Makan Siang"
+    } else if (jam > 18 && jam < 21) {
+        jenis = "Makan Malem"
+    } else if (jam > 1 && jam < 5) {
+        jenis = "Sahur"
+    } else {
+        jenis = "Nyemil"
+    }
+    return console.log(`Kalau jam ${jam}, namanya ${jenis}`);
+}
+
+// syntax Function Expression tanpa Nama
+// kalo function expresiion, urutannya harus declare funtion dulu baru panggil functionnya
+/* let variabelNamen = function (x, y) {
+    statements
+
+    return (z)
+}
+*/
+let tidur = function () {
+    console.log(`kurangin waktu tidur, banyakin latihan ngoding, lihat problem di codewars`);
+}
+tidur()
+
+// syntax Function Expression dengan Nama
+// kalo function expresiion, urutannya harus declare funtion dulu baru panggil functionnya
+/* let variabelNamen = function functionName(x, y) {
+    statements
+
+    return (z)
+}
+*/
+let tandaPagar = function hitung(a, b){
+    
+}
